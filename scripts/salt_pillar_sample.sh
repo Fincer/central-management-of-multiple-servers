@@ -1,5 +1,17 @@
 #!/bin/sh
 
+# Author: Pekka Helenius (~Fincer), 2018
+#
+# - This script creates two different text strings for two minions: minion_1 & minion_2
+# - This script is meant to be run on Salt master
+#
+# - This script creates the following files on master:
+# /srv/pillar/top.sls
+# /srv/pillar/minion-1.sls
+# /srv/pillar/minion-2.sls
+# /srv/salt/files/pillarfile
+# /srv/salt/myfirstpillar.sls
+
 if [ $(id -u) -eq 0 ]; then
     mkdir -p /srv/pillar
     

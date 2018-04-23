@@ -23,7 +23,7 @@ vbox_cpu = 1
 # package manager commands used in this Vagrantfile
 #
 # For more templates, see: https://app.vagrantup.com/boxes/search
-vbox_template = "debian/jessie64"
+vbox_template = "bento/ubuntu-16.04"
 
 #######################################
 # Create a new array for virtual machines

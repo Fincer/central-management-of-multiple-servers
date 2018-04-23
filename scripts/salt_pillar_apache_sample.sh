@@ -34,8 +34,8 @@ SITE_DATA
 
 tee /srv/salt/apache/samplesite.conf <<SAMPLE_SITE
 <VirtualHost *:80>
-    ServerName {{ (grains['os'].lower() + '.' + grains['id'] + '.com') }}
-    ServerAlias {{ ('www.' + grains['os'].lower() + '.' + grains['id'] + '.com') }}
+    ServerName {{ servername }}
+    ServerAlias {{ serveralias }}
     ServerAdmin webmaster@localhost
     DocumentRoot {{ ('/var/www/html/' + grains['id'] + '/') }}
     ErrorLog ${APACHE_LOG_DIR}/error.log
@@ -48,6 +48,9 @@ tee /srv/salt/apache/sampleindex.html <<SAMPLE_HTML
 SAMPLE_HTML
 
 tee /srv/salt/apache/init.sls <<APACHE_DATA
+
+{% set servername = grains['os'].lower() + '.' + grains['id'] + '.com' %}
+{% set serveralias = 'www.' + grains['os'].lower() + '.' + grains['id'] + '.com' %}
 
 apache_install:
   pkg.installed:
@@ -63,6 +66,9 @@ sample_page_conf:
     - user: root
     - group: root
     - template: jinja
+    - context:
+      servername: {{ servername }}
+      serveralias: {{ serveralias }}
     - require:
       - pkg: apache_install
 
@@ -87,7 +93,7 @@ sample_page_content:
 add_vhost_domain:
   file.append:
     - name: /etc/hosts
-    - text: 127.0.0.1 {{ grains['os'].lower() }}.{{ grains['id'] }}.com
+    - text: 127.0.0.1 {{ servername }}
     - require:
       - file: sample_page_content
       
@@ -100,7 +106,7 @@ restart_httpd:
 
 test_page:
   cmd.run:
-    - name: 'curl {{ grains['os'].lower() }}.{{ grains['id'] }}.com'
+    - name: 'curl -s {{ servername }}'
     - require:
       - service: restart_httpd
 

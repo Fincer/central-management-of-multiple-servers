@@ -1,17 +1,5 @@
 #!/bin/sh
 
-# Author: Pekka Helenius (~Fincer), 2018
-#
-# - This script creates two different text strings for two minions: minion_1 & minion_2
-# - This script is meant to be run on Salt master
-#
-# - This script creates the following files on master:
-# /srv/pillar/top.sls
-# /srv/pillar/minion-1.sls
-# /srv/pillar/minion-2.sls
-# /srv/salt/files/pillarfile
-# /srv/salt/myfirstpillar.sls
-
 if [ $(id -u) -eq 0 ]; then
     mkdir -p /srv/pillar
     
@@ -59,8 +47,11 @@ GENERIC_PILLAR
     else
         salt 'minion_*' test.ping
         if [ $? -eq 0 ]; then
+            echo -e "\e[1m\n**Salt -- pillar.items output**\n\e[0m"
             salt 'minion_*' pillar.items
+            echo -e "\e[1m\n**Salt -- state.apply output**\n\e[0m"
             salt 'minion_*' state.apply myfirstpillar
+            echo -e "\e[1m\n**Salt -- get file output with head command**\n\e[0m"
             salt 'minion_*' cmd.run 'head /tmp/pillarfile_for*'
         fi
 

@@ -1,0 +1,87 @@
+# Create multiple virtual machines with Vagrant on Linux
+# Author: Pekka Helenius (~Fincer), 2018
+
+#######################################
+# Basic Vagrantfile configuration
+
+# Number of virtual machines
+vbox_num = 2
+
+# Virtual machine name prefix
+vbox_prefix = "minion_"
+
+# Allocated memory per virtual machine
+# NOTE: Remember the RAM limits of your host machine!
+vbox_mem = 512
+
+# CPU's per virtual machine
+vbox_cpu = 1
+
+# Vagrant box template for virtual machines
+#
+# If you change this, remember to check for salt file locations &
+# package manager commands used in this Vagrantfile
+#
+# For more templates, see: https://app.vagrantup.com/boxes/search
+vbox_template = "debian/jessie64"
+
+#######################################
+# Create a new array for virtual machines
+
+vboxes = []
+
+(1..vbox_num).each do |vbox|
+  vboxes.push("#{vbox_prefix}#{vbox}")
+end
+
+#######################################
+VAGRANT_API_VERSION = 2
+
+#######################################
+# This is for salt_install provision below
+
+initial_setup = "
+# Start of $initial_setup variable
+
+apt-get update && \
+apt-get -y install salt-minion && \
+systemctl enable salt-minion
+
+  if [ $? -ne 0 ]; then
+    exit 1
+  fi
+
+# End of $initial_setup variable
+"
+
+#######################################
+# Define Vagrant machine configuration here
+
+Vagrant.configure(VAGRANT_API_VERSION) do |config|
+
+  config.vm.box = "#{vbox_template}"
+  config.vm.box_check_update = true
+  config.vm.synced_folder ".", "/vagrant", disabled: true
+
+  vboxes.each do |box|
+    config.vm.define "#{box}" do |node|
+
+      node.vm.provision "salt_install", run: "once", type: "shell" do |cmd_1|
+        cmd_1.inline = "#{initial_setup}"
+        cmd_1.privileged = "true"
+      end
+
+      node.vm.provision "salt_config", run: "once", type: "shell" do |cmd_2|
+        cmd_2.inline = "echo 'master: #{`hostname`}id: #{box}' | tee -a /etc/salt/minion && systemctl restart salt-minion"
+        cmd_2.privileged = "true"
+      end
+
+      node.vm.provider "virtualbox" do |v|
+        v.memory = "#{vbox_mem}"
+        v.cpus = "#{vbox_cpu}"
+        v.name = "#{box}"
+      end
+
+    end
+  end
+end

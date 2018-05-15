@@ -61,6 +61,8 @@ GENERIC_PILLAR
         if [ $? -eq 0 ]; then
             echo -e "\e[1m\n**Salt -- pillar.items output**\n\e[0m"
             salt 'minion_*' pillar.items
+            echo -e "\e[1m\n**Salt -- saltutil.refresh_pillar output**\n\e[0m"
+            salt 'minion_*' saltutil.refresh_pillar
             echo -e "\e[1m\n**Salt -- state.apply output**\n\e[0m"
             salt 'minion_*' state.apply myfirstpillar
             echo -e "\e[1m\n**Salt -- get file output with head command**\n\e[0m"

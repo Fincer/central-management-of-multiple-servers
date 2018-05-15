@@ -6,6 +6,32 @@ Kurssimoduuli käsittelee SaltStack:n käyttöä usean tietokoneen työympärist
 
 ## SISÄLLYSLUETTELO
 
+- [Järjestelmävaatimukset](https://github.com/Fincer-altego/central-management-of-multiple-servers/blob/master/module.md#j%C3%A4rjestelm%C3%A4vaatimukset)
+
+    - [Moduulin toteutusperiaatteista](https://github.com/Fincer-altego/central-management-of-multiple-servers/blob/master/module.md#moduulin-toteutusperiaatteista)
+
+- [Moduulin shell-skriptivaatimukset](https://github.com/Fincer-altego/central-management-of-multiple-servers/blob/master/module.md#moduulin-shell-skriptivaatimukset)
+
+- [Asennettavat ohjelmat](https://github.com/Fincer-altego/central-management-of-multiple-servers/blob/master/module.md#asennettavat-ohjelmat)
+
+- [Asennettavat binääritiedostot](https://github.com/Fincer-altego/central-management-of-multiple-servers/blob/master/module.md#asennettavat-bin%C3%A4%C3%A4ritiedostot)
+
+- [Asennettavat konfiguraatiot](https://github.com/Fincer-altego/central-management-of-multiple-servers/blob/master/module.md#asennettavat-konfiguraatiot)
+
+- [Moduulin rakenne](https://github.com/Fincer-altego/central-management-of-multiple-servers/blob/master/module.md#moduulin-rakenne)
+
+- [Moduulin ajo](https://github.com/Fincer-altego/central-management-of-multiple-servers/blob/master/module.md#moduulin-ajo)
+
+- [Miltä näyttää minion-koneilla?](https://github.com/Fincer-altego/central-management-of-multiple-servers/blob/master/module.md#milt%C3%A4-n%C3%A4ytt%C3%A4%C3%A4-minion-koneilla)
+
+- [Huomioita moduulin ajosta](https://github.com/Fincer-altego/central-management-of-multiple-servers/blob/master/module.md#huomioita-moduulin-ajosta)
+
+- [Moduulin hyvät puolet](https://github.com/Fincer-altego/central-management-of-multiple-servers/blob/master/module.md#moduulin-hyv%C3%A4t-puolet)
+
+- [Moduulin huonot puolet](https://github.com/Fincer-altego/central-management-of-multiple-servers/blob/master/module.md#moduulin-huonot-puolet)
+
+- [Moduulin kehittämistarpeet](https://github.com/Fincer-altego/central-management-of-multiple-servers/blob/master/module.md#moduulin-kehitt%C3%A4mistarpeet)
+
 -------------------
 
 ## Aihe

@@ -142,7 +142,7 @@ Moduuli asentaa alla luetellut ohjelmat Microsoft Windows - ja Linux Ubuntu 18.0
 
     - Kuvaus: *"The gpsd service daemon can monitor one or more GPS devices connected to a host computer, making all data on the location and movements of the sensors available to be queried on TCP port 2947."*
 
-## Asennettavat tiedostot
+## Asennettavat binääritiedostot
 
 Moduuli asentaa seuraavat suoritettavat tiedostot Microsoft Windows - ja Linux Ubuntu 18.04 LTS -käyttöympäristöihin.
 

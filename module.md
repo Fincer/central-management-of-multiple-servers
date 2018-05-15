@@ -280,6 +280,8 @@ Nämä tiedostot asennetaan Salt minion -koneen järjestelmäpolkuun /usr/local/
 
 ## Asennettavat konfiguraatiot
 
+Seuraavat muutostoimenpiteet on toteutettu Salt:n _file.managed_ -toiminnolla eli tiedoston korvauksella.
+
 ### Microsoft Windows
 
 - QGIS -konfiguraatio, joka kytkee QGIS-ohjelmasta automaattisesti päälle laserkeilausdatan prosessoinnissa tarvittavat LAStools -työkalut, jotka on asennettu järjestelmäkansioon C:\lastools\

@@ -1,5 +1,7 @@
 # Kurssimoduuli
 
+- Linkki moduuliin: [Fincer-altego - Salt, GIS Workstation](https://github.com/Fincer-altego/salt_gisworkstation)
+
 Tämä kurssimoduuli on tehty osana Haaga-Helian Tietojenkäsittelyn koulutusohjelman kurssia [Palvelinten hallinta (ICT4TN022, kevät 2018)](http://www.haaga-helia.fi/fi/opinto-opas/opintojaksokuvaukset/ICT4TN022).
 
 Kurssimoduuli käsittelee SaltStack:n käyttöä usean tietokoneen työympäristössä. Yksinkertaistettuna periaatteena yksi tietokone toimii Master-roolissa, ja käskyttää kytkennässä olevia, Minion-roolissa olevia tietokoneita ohjelmien konfiguraatioiden, asennusten, käyttäjänhallinnan jne. suhteen.

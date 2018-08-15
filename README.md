@@ -11,16 +11,16 @@ README
 
 # Table of contents
 
-- [Exercise 1](https://github.com/Fincer/central-management-of-multiple-servers/blob/master/h1.md)
+- [Exercise 1](https://github.com/Fincer/central-management-of-multiple-servers/blob/master/exercises/h1.md)
 
-- [Exercise 2](https://github.com/Fincer/central-management-of-multiple-servers/blob/master/h2.md)
+- [Exercise 2](https://github.com/Fincer/central-management-of-multiple-servers/blob/master/exercises/h2.md)
 
-- [Exercise 3](https://github.com/Fincer/central-management-of-multiple-servers/blob/master/h3.md)
+- [Exercise 3](https://github.com/Fincer/central-management-of-multiple-servers/blob/master/exercises/h3.md)
 
-- [Exercise 4](https://github.com/Fincer/central-management-of-multiple-servers/blob/master/h4.md)
+- [Exercise 4](https://github.com/Fincer/central-management-of-multiple-servers/blob/master/exercises/h4.md)
 
-- [Exercise 5](https://github.com/Fincer/central-management-of-multiple-servers/blob/master/h5.md)
+- [Exercise 5](https://github.com/Fincer/central-management-of-multiple-servers/blob/master/exercises/h5.md)
 
-- [Exercise 6](https://github.com/Fincer/central-management-of-multiple-servers/blob/master/h6.md)
+- [Exercise 6](https://github.com/Fincer/central-management-of-multiple-servers/blob/master/exercises/h6.md)
 
-- [Course module](https://github.com/Fincer/central-management-of-multiple-servers/blob/master/module.md)
+- [Course module](https://github.com/Fincer/central-management-of-multiple-servers/blob/master/exercises/module.md)

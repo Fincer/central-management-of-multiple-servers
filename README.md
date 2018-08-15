@@ -11,16 +11,16 @@ README
 
 # Table of contents
 
-- [Exercise 1](https://github.com/Fincer/central-management-of-multiple-servers/blob/master/exercises/h1.md)
+- [Exercise 1 - Setting up a SaltStack environment](https://github.com/Fincer/central-management-of-multiple-servers/blob/master/exercises/h1.md)
 
-- [Exercise 2](https://github.com/Fincer/central-management-of-multiple-servers/blob/master/exercises/h2.md)
+- [Exercise 2 - Package-File-Service model and Apache in SaltStack](https://github.com/Fincer/central-management-of-multiple-servers/blob/master/exercises/h2.md)
 
-- [Exercise 3](https://github.com/Fincer/central-management-of-multiple-servers/blob/master/exercises/h3.md)
+- [Exercise 3 - Advanced SaltStack with Jinja variables and functions](https://github.com/Fincer/central-management-of-multiple-servers/blob/master/exercises/h3.md)
 
-- [Exercise 4](https://github.com/Fincer/central-management-of-multiple-servers/blob/master/exercises/h4.md)
+- [Exercise 4 - SaltStack pillars structure & minions on Vagrant](https://github.com/Fincer/central-management-of-multiple-servers/blob/master/exercises/h4.md)
 
-- [Exercise 5](https://github.com/Fincer/central-management-of-multiple-servers/blob/master/exercises/h5.md)
+- [Exercise 5 - SaltStack with Git](https://github.com/Fincer/central-management-of-multiple-servers/blob/master/exercises/h5.md)
 
-- [Exercise 6](https://github.com/Fincer/central-management-of-multiple-servers/blob/master/exercises/h6.md)
+- [Exercise 6 - Preparations for SaltStack course module](https://github.com/Fincer/central-management-of-multiple-servers/blob/master/exercises/h6.md)
 
-- [Course module](https://github.com/Fincer/central-management-of-multiple-servers/blob/master/exercises/module.md)
+- [Course module - Setting up Windows/Linux GIS workstations with SaltStack](https://github.com/Fincer/central-management-of-multiple-servers/blob/master/exercises/module.md)
